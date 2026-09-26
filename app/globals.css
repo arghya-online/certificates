@@ -405,3 +405,1131 @@ input {
     gap: 7px;
   }
 }
+
+/* SaaS certificate workspace */
+.saas-app {
+  min-height: 100vh;
+  background: #f7f8fa;
+  color: #17202b;
+}
+.saas-nav {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding: 0 32px;
+  border-bottom: 1px solid #e5e8ed;
+  background: #ffffff;
+}
+.saas-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 210px;
+}
+.saas-logo {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+}
+.saas-brand strong,
+.saas-brand span {
+  display: block;
+}
+.saas-brand strong {
+  color: #17202b;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+.saas-brand span {
+  margin-top: 2px;
+  color: #9aa3af;
+  font-size: 10px;
+}
+.saas-nav-context {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #788392;
+  font-size: 12px;
+}
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #23a26d;
+}
+.nav-divider {
+  width: 1px;
+  height: 14px;
+  margin: 0 3px;
+  background: #e1e5ea;
+}
+.saas-masthead {
+  width: 118px;
+  height: auto;
+  margin-left: auto;
+  mix-blend-mode: multiply;
+  opacity: 0.72;
+}
+.saas-layout {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.saas-sidebar {
+  position: relative;
+  display: flex;
+  flex: 0 0 230px;
+  flex-direction: column;
+  min-height: calc(100vh - 68px);
+  padding: 30px 16px;
+  border-right: 1px solid #e5e8ed;
+  background: #fbfcfd;
+}
+.sidebar-label {
+  margin: 0 12px 12px;
+  color: #a2aab5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.sidebar-label-lower {
+  margin-top: 34px;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  color: #697586;
+  font-size: 13px;
+}
+.sidebar-link.active {
+  background: #eaf1ff;
+  color: #2563eb;
+  font-weight: 650;
+}
+.sidebar-link span {
+  margin-left: auto;
+  color: #8b99ad;
+  font-size: 11px;
+}
+.event-sidebar {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+  border: 1px solid #e4e8ed;
+  border-radius: 8px;
+  background: white;
+}
+.event-sidebar strong {
+  color: #273342;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.event-sidebar span {
+  color: #9aa3af;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding: 0 12px;
+  color: #23a26d;
+  font-size: 11px;
+}
+.saas-content {
+  width: 100%;
+  max-width: 1120px;
+  padding: 42px 48px 34px;
+}
+.saas-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+.saas-eyebrow {
+  margin: 0 0 9px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.saas-heading h1 {
+  margin: 0;
+  color: #17202b;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.saas-heading > div > p:last-child {
+  margin: 9px 0 0;
+  color: #7a8594;
+  font-size: 13px;
+}
+.event-chip {
+  display: grid;
+  gap: 5px;
+  min-width: 240px;
+  padding: 12px 14px;
+  border: 1px solid #dfe5ec;
+  border-radius: 8px;
+  background: #fff;
+}
+.event-chip span {
+  color: #9aa3af;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.event-chip strong {
+  color: #273342;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.saas-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.saas-stats > div {
+  display: grid;
+  gap: 7px;
+  min-height: 112px;
+  padding: 17px 18px;
+  border: 1px solid #e3e7ec;
+  border-radius: 9px;
+  background: #fff;
+}
+.saas-stats span,
+.saas-stats small {
+  color: #8b96a5;
+  font-size: 11px;
+}
+.saas-stats strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #202c3a;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+}
+.saas-stats small {
+  font-size: 10px;
+}
+.stat-success {
+  color: #168257 !important;
+  font-size: 15px !important;
+}
+.certificate-card {
+  overflow: hidden;
+  border: 1px solid #e1e6ec;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(25, 40, 60, 0.035);
+}
+.card-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px 18px;
+}
+.card-toolbar h2 {
+  margin: 0;
+  color: #202c3a;
+  font-size: 15px;
+  font-weight: 700;
+}
+.card-toolbar p {
+  margin: 6px 0 0;
+  color: #8b96a5;
+  font-size: 11px;
+}
+.record-pill {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #f0f3f6;
+  color: #6f7b8b;
+  font-size: 10px;
+  font-weight: 700;
+}
+.certificate-card .directory-tools {
+  padding: 14px 24px;
+  border-top: 1px solid #edf0f3;
+  border-bottom: 1px solid #edf0f3;
+  background: #fbfcfd;
+}
+.certificate-card .directory-search {
+  height: 38px;
+  border-color: #e0e5eb;
+  border-radius: 6px;
+  background: white;
+  font-size: 12px;
+}
+.certificate-card .search-icon {
+  color: #8b96a5;
+}
+.certificate-card .participant-list {
+  padding: 0 24px;
+}
+.certificate-card .participant-row {
+  min-height: 64px;
+  border-color: #edf0f3;
+}
+.certificate-card .participant-row:hover {
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #f8fafc;
+}
+.certificate-card .participant-id {
+  color: #a0a9b5;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+}
+.certificate-card .participant-row p {
+  color: #344150;
+  font-size: 13px;
+  font-weight: 550;
+}
+.certificate-card .download-button {
+  padding: 7px 10px;
+  border: 1px solid #dce3eb;
+  border-radius: 6px;
+  color: #526174;
+  font-size: 10px;
+  text-transform: none;
+}
+.certificate-card .download-button:hover {
+  border-color: #b8cdf5;
+  background: #f2f6ff;
+  color: #2563eb;
+}
+.certificate-card .button-arrow {
+  display: none;
+}
+.saas-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 26px;
+  color: #9aa3af;
+  font-size: 10px;
+}
+
+@media (max-width: 760px) {
+  .saas-nav {
+    height: 60px;
+    padding: 0 18px;
+  }
+  .saas-brand {
+    min-width: auto;
+  }
+  .saas-nav-context {
+    display: none;
+  }
+  .saas-masthead {
+    width: 95px;
+  }
+  .saas-layout {
+    display: block;
+  }
+  .saas-sidebar {
+    display: none;
+  }
+  .saas-content {
+    padding: 30px 18px;
+  }
+  .saas-heading {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .event-chip {
+    min-width: 0;
+  }
+  .saas-stats {
+    grid-template-columns: 1fr;
+  }
+  .saas-stats > div {
+    min-height: auto;
+  }
+  .card-toolbar {
+    align-items: start;
+    flex-direction: column;
+    padding: 18px;
+  }
+  .certificate-card .directory-tools {
+    padding: 14px 18px;
+  }
+  .certificate-card .participant-list {
+    padding: 0 18px;
+  }
+  .certificate-card .participant-row {
+    grid-template-columns: 28px 1fr;
+    padding: 15px 0;
+  }
+  .certificate-card .download-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .saas-footer {
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+/* Vibrant certificate drop theme */
+.saas-app {
+  background: #171329;
+  color: #f8f7ff;
+}
+.saas-nav {
+  height: 64px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #211a3d;
+}
+.saas-brand strong {
+  color: #fff;
+}
+.saas-brand span {
+  color: #aaa1c7;
+}
+.saas-logo {
+  border-radius: 10px;
+  background: #ff6b51;
+  box-shadow: 0 0 0 4px rgba(255, 107, 81, 0.16);
+}
+.saas-nav-context {
+  color: #b9b0d1;
+}
+.nav-divider {
+  background: rgba(255, 255, 255, 0.18);
+}
+.saas-masthead {
+  filter: brightness(0) invert(1);
+  opacity: 0.82;
+}
+.saas-sidebar {
+  min-height: calc(100vh - 64px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background: #211a3d;
+}
+.sidebar-label {
+  color: #81759e;
+}
+.sidebar-link {
+  color: #b9b0d1;
+}
+.sidebar-link.active {
+  background: #ff6b51;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(255, 107, 81, 0.18);
+}
+.sidebar-link span {
+  color: #ffd4ca;
+}
+.event-sidebar {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.06);
+}
+.event-sidebar strong {
+  color: #fff;
+}
+.event-sidebar span {
+  color: #aaa1c7;
+}
+.sidebar-footer {
+  color: #baff50;
+}
+.saas-content {
+  padding-top: 38px;
+}
+.saas-heading {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  margin-bottom: 22px;
+  padding: 30px 34px;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #ff6b51 0%, #ff8270 42%, #c76cff 100%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+}
+.saas-heading::after {
+  content: "CERTIFICATE\A DROP";
+  position: absolute;
+  right: -8px;
+  bottom: -25px;
+  color: rgba(255, 255, 255, 0.13);
+  font-size: clamp(50px, 9vw, 116px);
+  font-weight: 900;
+  line-height: 0.78;
+  text-align: right;
+  white-space: pre;
+  letter-spacing: -0.09em;
+}
+.saas-heading > div:first-child,
+.event-chip {
+  position: relative;
+  z-index: 1;
+}
+.saas-eyebrow {
+  color: #241638;
+}
+.saas-heading h1 {
+  color: #fff;
+  font-size: clamp(32px, 7vw, 58px);
+  letter-spacing: -0.06em;
+}
+.saas-heading > div > p:last-child {
+  max-width: 380px;
+  color: rgba(255, 255, 255, 0.83);
+}
+.event-chip {
+  align-self: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(35, 18, 65, 0.24);
+  backdrop-filter: blur(8px);
+}
+.event-chip span {
+  color: #ffd4ca;
+}
+.event-chip strong {
+  color: #fff;
+}
+.saas-stats {
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.saas-stats > div {
+  min-height: 102px;
+  border: 1px solid #302753;
+  border-radius: 16px;
+  background: #211a3d;
+  box-shadow: none;
+}
+.saas-stats span,
+.saas-stats small {
+  color: #aaa1c7;
+}
+.saas-stats strong {
+  color: #fff;
+}
+.saas-stats > div:first-child strong {
+  color: #baff50;
+}
+.stat-success {
+  color: #baff50 !important;
+}
+.certificate-card {
+  border: 0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+.card-toolbar {
+  padding: 22px 24px 18px;
+}
+.card-toolbar h2 {
+  color: #211a3d;
+}
+.card-toolbar p {
+  color: #8c849d;
+}
+.record-pill {
+  background: #eaffbd;
+  color: #4d701b;
+}
+.certificate-card .directory-tools {
+  border-top: 1px solid #f0ebf5;
+  border-bottom: 1px solid #f0ebf5;
+  background: #fbfaff;
+}
+.certificate-card .directory-search:focus {
+  border-color: #ff6b51;
+  box-shadow: 0 0 0 3px rgba(255, 107, 81, 0.15);
+}
+.certificate-card .participant-row p {
+  color: #2b2440;
+}
+.certificate-card .participant-id {
+  color: #b7aec8;
+}
+.certificate-card .download-button {
+  border-color: #e2dce9;
+  color: #ff5c43;
+}
+.certificate-card .download-button:hover {
+  border-color: #ff6b51;
+  background: #fff1ee;
+  color: #ee4e37;
+}
+.saas-footer {
+  color: #81759e;
+}
+
+@media (max-width: 760px) {
+  .saas-nav {
+    padding: 0 16px;
+  }
+  .saas-content {
+    padding: 20px 14px 28px;
+  }
+  .saas-heading {
+    min-height: 380px;
+    margin-right: 0;
+    padding: 25px 22px;
+    border-radius: 22px;
+    flex-direction: column;
+  }
+  .saas-heading::after {
+    right: 8px;
+    bottom: 22px;
+    font-size: 70px;
+  }
+  .event-chip {
+    width: 100%;
+    margin-top: auto;
+  }
+  .saas-stats {
+    gap: 9px;
+  }
+  .saas-stats > div {
+    min-height: 0;
+    padding: 14px 16px;
+    border-radius: 13px;
+  }
+  .certificate-card {
+    border-radius: 16px;
+  }
+  .card-toolbar {
+    padding: 19px 18px 15px;
+  }
+  .certificate-card .participant-row {
+    min-height: 82px;
+  }
+  .certificate-card .download-button {
+    background: #fff1ee;
+  }
+}
+
+/* Final mobile-first art direction: sharp, abstract, download-focused */
+.saas-app {
+  position: relative;
+  overflow: hidden;
+  background: #151126;
+}
+.saas-app::before,
+.saas-app::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+}
+.saas-app::before {
+  top: 64px;
+  right: -9vw;
+  width: 42vw;
+  height: 42vw;
+  min-width: 260px;
+  min-height: 260px;
+  background: #baff50;
+  clip-path: polygon(52% 0, 100% 22%, 74% 100%, 0 72%);
+  opacity: 0.9;
+}
+.saas-app::after {
+  bottom: 3vh;
+  left: -12vw;
+  width: 35vw;
+  height: 35vw;
+  min-width: 220px;
+  min-height: 220px;
+  background: #ff654f;
+  clip-path: polygon(18% 0, 100% 23%, 78% 100%, 0 71%);
+  opacity: 0.8;
+}
+.saas-nav,
+.saas-layout {
+  position: relative;
+  z-index: 1;
+}
+.saas-nav {
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+.saas-sidebar {
+  background: rgba(33, 26, 61, 0.88);
+}
+.saas-content {
+  position: relative;
+  z-index: 1;
+}
+.saas-heading {
+  border-radius: 0;
+  clip-path: polygon(0 0, 96% 0, 100% 18%, 100% 100%, 3% 100%, 0 84%);
+  background: #ff654f;
+  box-shadow: 12px 14px 0 #baff50;
+}
+.saas-heading::before {
+  content: "";
+  position: absolute;
+  top: -65px;
+  right: 16%;
+  width: 190px;
+  height: 280px;
+  background: #baff50;
+  clip-path: polygon(50% 0, 100% 38%, 64% 100%, 0 68%);
+  opacity: 0.8;
+}
+.saas-heading::after {
+  right: 8px;
+  bottom: 11px;
+  color: rgba(41, 16, 50, 0.22);
+}
+.event-chip,
+.saas-stats > div,
+.certificate-card,
+.event-sidebar,
+.saas-logo,
+.download-button,
+.directory-search,
+.record-pill {
+  border-radius: 0;
+}
+.event-chip {
+  border-color: rgba(255, 255, 255, 0.48);
+}
+.saas-stats > div {
+  border-color: #3c315f;
+}
+.certificate-card {
+  box-shadow: 12px 14px 0 rgba(186, 255, 80, 0.9);
+}
+.certificate-card .directory-tools {
+  padding-block: 16px;
+}
+.certificate-card .participant-list {
+  padding-bottom: 5px;
+}
+.certificate-card .participant-row {
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  min-height: 68px;
+  padding-block: 8px;
+}
+.certificate-card .participant-row:hover {
+  padding-left: 0;
+  padding-right: 0;
+  background: #fff5f2;
+}
+.certificate-card .download-button {
+  min-height: 34px;
+  padding: 7px 9px;
+  white-space: nowrap;
+}
+.certificate-card .download-button span {
+  display: inline;
+}
+.success-overlay {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(17, 11, 34, 0.74);
+  backdrop-filter: blur(8px);
+}
+.success-modal {
+  position: relative;
+  width: min(100%, 420px);
+  padding: 34px 28px 28px;
+  border: 3px solid #baff50;
+  background: #211a3d;
+  color: #fff;
+  box-shadow: 12px 12px 0 #ff654f;
+  text-align: left;
+}
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.success-symbol {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 20px;
+  background: #baff50;
+  color: #211a3d;
+}
+.success-kicker {
+  margin: 0 0 8px;
+  color: #baff50;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.success-modal h2 {
+  max-width: 290px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(27px, 7vw, 36px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+.success-modal > p:not(.success-kicker) {
+  margin: 15px 0 24px;
+  color: #c4bbd5;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.modal-action {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 0;
+  background: #ff654f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.modal-action:hover {
+  background: #ff806e;
+}
+
+@media (max-width: 760px) {
+  .saas-content {
+    padding: 20px 14px 32px;
+  }
+  .saas-heading {
+    min-height: 365px;
+    box-shadow: 8px 10px 0 #baff50;
+  }
+  .saas-stats > div {
+    padding: 13px 15px;
+  }
+  .certificate-card {
+    box-shadow: 8px 10px 0 rgba(186, 255, 80, 0.9);
+  }
+  .certificate-card .participant-row,
+  .certificate-card .participant-row:hover {
+    grid-template-columns: 26px minmax(0, 1fr) auto;
+    gap: 8px;
+    min-height: 70px;
+    padding: 11px 0;
+  }
+  .certificate-card .download-button {
+    grid-column: auto;
+    justify-self: end;
+    padding: 7px 8px;
+  }
+  .certificate-card .download-button span {
+    display: none;
+  }
+  .certificate-card .participant-row p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .success-modal {
+    padding: 30px 22px 22px;
+    box-shadow: 8px 8px 0 #ff654f;
+  }
+}
+
+/* Certificate workspace hero */
+.saas-heading {
+  min-height: 410px;
+  align-items: stretch;
+  padding: clamp(34px, 5vw, 58px);
+  border-radius: 16px;
+  clip-path: none;
+  background: #ff654f;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+}
+.saas-heading::before {
+  top: -120px;
+  right: -30px;
+  width: 390px;
+  height: 390px;
+  background: #baff50;
+  clip-path: polygon(38% 0, 100% 25%, 77% 100%, 0 66%);
+  opacity: 0.34;
+}
+.saas-heading::after {
+  content: "CERTIFICATE";
+  right: -26px;
+  bottom: -20px;
+  color: rgba(36, 22, 56, 0.13);
+  font-size: clamp(74px, 13vw, 166px);
+  line-height: 0.8;
+  letter-spacing: -0.1em;
+}
+.saas-heading > div:first-child {
+  max-width: 700px;
+  z-index: 2;
+}
+.saas-eyebrow {
+  margin-bottom: 18px;
+  color: #26183b;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+.saas-heading h1 {
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+.saas-heading > div > p:last-child {
+  max-width: 430px;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.hero-search {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  max-width: 590px;
+  margin-top: 28px;
+}
+.hero-search-field {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  height: 56px;
+  padding: 0 17px;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  background: #fff;
+  color: #ff654f;
+  box-shadow: 0 7px 0 rgba(36, 22, 56, 0.12);
+}
+.hero-search-field input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #211a3d;
+  font-size: 14px;
+}
+.hero-search-field input::placeholder {
+  color: #9c94a7;
+}
+.hero-search button {
+  min-width: 154px;
+  min-height: 56px;
+  padding: 0 18px;
+  border: 2px solid #211a3d;
+  border-radius: 14px;
+  background: #211a3d;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 7px 0 rgba(36, 22, 56, 0.15);
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s,
+    background 0.18s;
+}
+.hero-search button:hover {
+  background: #33265a;
+  transform: translateY(2px);
+  box-shadow: 0 5px 0 rgba(36, 22, 56, 0.15);
+}
+.event-chip {
+  align-self: flex-end;
+  width: min(100%, 275px);
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 14px;
+  background: rgba(33, 26, 61, 0.83);
+  box-shadow: 0 12px 24px rgba(36, 22, 56, 0.12);
+}
+.event-chip span,
+.event-chip strong,
+.event-chip small {
+  display: block;
+}
+.event-chip span {
+  margin-bottom: 10px;
+  color: #baff50;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+.event-chip strong {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.35;
+}
+.event-chip small {
+  margin-top: 12px;
+  color: #d5cde0;
+  font-size: 11px;
+}
+.saas-stats {
+  grid-template-columns: 1fr;
+  margin-top: 26px;
+  margin-bottom: 24px;
+}
+.saas-stats > div {
+  min-height: 0;
+  padding: 17px 20px;
+  border-radius: 14px;
+  background: #211a3d;
+}
+.saas-stats > div strong {
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+@media (max-width: 760px) {
+  .saas-heading {
+    min-height: 0;
+    padding: 28px 20px 20px;
+    border-radius: 14px;
+  }
+  .saas-heading::before {
+    top: -100px;
+    right: -125px;
+    width: 310px;
+    height: 310px;
+    opacity: 0.28;
+  }
+  .saas-heading::after {
+    right: -12px;
+    bottom: 146px;
+    font-size: 74px;
+  }
+  .saas-heading h1 {
+    font-size: clamp(39px, 12vw, 58px);
+  }
+  .saas-heading > div > p:last-child {
+    font-size: 14px;
+  }
+  .hero-search {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .hero-search-field,
+  .hero-search button {
+    width: 100%;
+    min-height: 54px;
+    height: 54px;
+  }
+  .hero-search button {
+    border-radius: 12px;
+  }
+  .event-chip {
+    align-self: stretch;
+    width: 100%;
+    margin-top: 24px;
+    border-radius: 12px;
+  }
+  .saas-stats {
+    margin-top: 22px;
+  }
+}
+
+/* Workspace geometry: sharp surfaces and search directly above the names */
+.saas-heading,
+.event-chip,
+.saas-stats > div,
+.certificate-card,
+.certificate-card .hero-search-field,
+.certificate-card .hero-search button {
+  border-radius: 0;
+}
+.saas-heading {
+  box-shadow: 0 14px 0 #baff50;
+}
+.certificate-card {
+  border-radius: 0;
+}
+.certificate-card .hero-search {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: none;
+  margin: 0;
+  padding: 18px 24px 20px;
+  border-top: 1px solid #f0ebf5;
+  border-bottom: 1px solid #f0ebf5;
+  background: #fbfaff;
+}
+.certificate-card .hero-search-field {
+  width: 100%;
+  height: 52px;
+  min-height: 52px;
+  border: 1px solid #ddd6e8;
+  background: #fff;
+  box-shadow: none;
+  color: #ff654f;
+}
+.certificate-card .hero-search-field:focus-within {
+  border-color: #ff654f;
+  box-shadow: 0 0 0 3px rgba(255, 101, 79, 0.12);
+}
+.certificate-card .hero-search button {
+  width: 100%;
+  min-height: 46px;
+  border: 0;
+  background: #ff654f;
+  box-shadow: none;
+  font-size: 11px;
+}
+.certificate-card .hero-search button:hover {
+  background: #e95542;
+  transform: none;
+  box-shadow: none;
+}
+.certificate-card .participant-list {
+  padding-top: 4px;
+}
+
+@media (max-width: 760px) {
+  .saas-heading {
+    box-shadow: 0 9px 0 #baff50;
+  }
+  .certificate-card .hero-search {
+    padding: 15px 18px 17px;
+  }
+  .certificate-card .hero-search-field {
+    height: 50px;
+    min-height: 50px;
+  }
+}
