@@ -1,4 +1,5 @@
 import sharp from "sharp";
+import { readFileSync } from "fs";
 import path from "path";
 
 export async function generateCertificate(name: string) {
@@ -7,14 +8,28 @@ export async function generateCertificate(name: string) {
     "public",
     "certificate-template.png",
   );
+  const fontPath = path.join(
+    process.cwd(),
+    "node_modules",
+    "@fontsource",
+    "playfair-display",
+    "files",
+    "playfair-display-latin-500-normal.woff",
+  );
+  const fontData = readFileSync(fontPath).toString("base64");
 
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1414" viewBox="0 0 2000 1414">
       <style>
+        @font-face {
+          font-family: CertificateSerif;
+          src: url(data:font/woff;base64,${fontData}) format("woff");
+        }
+
         .name {
-          font-family: serif;
-          font-size: 58px;
-          font-weight: 400;
+          font-family: CertificateSerif;
+          font-size: 62px;
+          font-weight: 500;
           fill: #111827;
         }
       </style>
