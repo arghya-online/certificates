@@ -12,8 +12,9 @@ export async function generateCertificate(name: string) {
     <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1414" viewBox="0 0 2000 1414">
       <style>
         .name {
-          font-family: Georgia, "Times New Roman", serif;
+          font-family: serif;
           font-size: 58px;
+          font-weight: 400;
           fill: #111827;
         }
       </style>
