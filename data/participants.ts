@@ -12,7 +12,7 @@ export const participants = [
   "Aritra Halder",
   "Arnab Namata",
   "Debanjan Duyari",
-  "Debansh Agarwal",
+  "Devansh Agarwal",
   "DibYendu Jana",
   "Dipanjan Chatterjee",
   "Indrajit Nandi",
