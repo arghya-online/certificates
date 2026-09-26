@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
       headers: {
         "Content-Type": "image/png",
         "Content-Disposition": "attachment; filename=certificate.png",
+        "Cache-Control": "no-store, max-age=0",
       },
     });
   } catch (error) {

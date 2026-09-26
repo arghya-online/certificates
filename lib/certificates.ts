@@ -9,10 +9,10 @@ export async function generateCertificate(name: string) {
   );
 
   const svg = `
-    <svg width="2000" height="1414">
+    <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1414" viewBox="0 0 2000 1414">
       <style>
         .name {
-          font-family: Georgia, serif;
+          font-family: Georgia, "Times New Roman", serif;
           font-size: 58px;
           fill: #111827;
         }
@@ -22,6 +22,7 @@ export async function generateCertificate(name: string) {
         x="1000"
         y="690"
         text-anchor="middle"
+        dominant-baseline="alphabetic"
         class="name"
       >
         ${escapeXml(name)}
