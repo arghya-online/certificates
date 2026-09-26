@@ -1,69 +1,155 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
+import { ArrowUpRight, Download, Loader2, Search } from "lucide-react";
+import { participants } from "../data/participants";
 
 export default function Home() {
+  const [search, setSearch] = useState("");
+  const [loadingName, setLoadingName] = useState<string | null>(null);
+
+  const filteredParticipants = useMemo(() => {
+    const query = search.trim().toLowerCase();
+
+    if (!query) {
+      return participants;
+    }
+
+    return participants.filter((name) => name.toLowerCase().includes(query));
+  }, [search]);
+
+  async function downloadCertificate(name: string) {
+    try {
+      setLoadingName(name);
+
+      const response = await fetch("/api/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json().catch(() => null);
+
+        throw new Error(error?.error || "Unable to generate certificate");
+      }
+
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${name}-certificate.png`;
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error(error);
+
+      alert(error instanceof Error ? error.message : "Something went wrong");
+    } finally {
+      setLoadingName(null);
+    }
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen overflow-hidden bg-[#f3eee5] text-[#14202a]">
+      <section className="event-intro mx-auto max-w-7xl px-5 pb-12 pt-10 sm:px-8 sm:pb-16 sm:pt-14">
+        <p className="section-kicker">
+          IEI IEM Students&apos; Chapter presents
+        </p>
+        <h1>IoT Based Application Workshop</h1>
+        <div className="event-details">
+          <span>Official participation certificates</span>
+          <span>Department of Mechanical Engineering</span>
+          <span>Institute of Engineering and Management, Kolkata</span>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24">
+        <div className="directory-heading">
+          <div>
+            <p className="section-kicker">The roll of honour</p>
+            <h2>Find your certificate</h2>
+          </div>
+          <p className="section-note">
+            Search the verified participant register
+            <br className="hidden sm:block" /> and download your signed digital
+            copy.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="directory-shell">
+          <div className="directory-tools">
+            <div className="relative w-full sm:max-w-md">
+              <Search size={18} className="search-icon" />
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Type a participant name"
+                className="directory-search"
+              />
+            </div>
+            <span className="directory-count">
+              {filteredParticipants.length}{" "}
+              {filteredParticipants.length === 1 ? "record" : "records"}
+            </span>
+            {search && (
+              <button onClick={() => setSearch("")} className="clear-search">
+                Clear
+              </button>
+            )}
+          </div>
+
+          <div className="participant-list">
+            {filteredParticipants.length > 0 ? (
+              filteredParticipants.map((name, index) => (
+                <div key={name} className="participant-row">
+                  <div className="participant-id">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <p>{name}</p>
+                  <button
+                    onClick={() => downloadCertificate(name)}
+                    disabled={loadingName !== null}
+                    className="download-button"
+                  >
+                    {loadingName === name ? (
+                      <Loader2 size={17} className="animate-spin" />
+                    ) : (
+                      <Download size={17} />
+                    )}
+                    <span>
+                      {loadingName === name ? "Preparing" : "Get certificate"}
+                    </span>
+                    <ArrowUpRight size={15} className="button-arrow" />
+                  </button>
+                </div>
+              ))
+            ) : (
+              <div className="empty-state">
+                <Search size={22} />
+                <h3>No participant found</h3>
+                <p>Try checking the spelling of the name.</p>
+              </div>
+            )}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <footer className="site-footer">
+        <span>IEI IEM Students&apos; Chapter</span>
+        <span>Department of Mechanical Engineering · Kolkata</span>
+        <span>© 2025</span>
+      </footer>
+    </main>
   );
 }
